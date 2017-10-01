@@ -62,6 +62,7 @@ group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
   gem 'dotenv-rails'
+  gem 'onkcop', require: false
 end
 
 group :test do
