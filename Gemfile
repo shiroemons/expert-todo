@@ -39,8 +39,6 @@ group :development, :test do
   gem 'bullet'
   gem 'factory_girl_rails'
   gem 'awesome_print', require: 'ap'
-  gem 'hirb'
-  gem 'hirb-unicode'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-byebug'
