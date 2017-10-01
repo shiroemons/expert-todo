@@ -16,6 +16,14 @@
 require 'factory_girl_rails'
 
 RSpec.configure do |config|
+  config.before :suite do
+    DatabaseRewinder.clean_all
+  end
+
+  config.after :each do
+    DatabaseRewinder.clean
+  end
+
   config.before :all do
     FactoryGirl.reload
     FactoryGirl.factories.clear
