@@ -7,4 +7,12 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
+    - if current_user
+      = link_to 'Logout', :logout, method: :post
+    - else
+      = link_to 'Register', new_user_path
+      = link_to 'Login', :login
+    %div
+      %p.notice= flash[:notice]
+      %p.alert= flash[:alert]
     = yield
