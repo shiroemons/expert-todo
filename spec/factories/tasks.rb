@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :task do
-    title "MyString"
-    content "MyText"
-    expired_at "2017-10-09 20:11:17"
-    user nil
+    sequence(:title) { |n| "test_#{n}" }
+    content 'MyText'
+    expired_at { Time.now.zone }
+    association :user
   end
 end
