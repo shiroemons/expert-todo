@@ -8,6 +8,7 @@
     = javascript_include_tag 'application'
   %body
     - if current_user
+      = link_to 'Tasks', tasks_path
       = link_to 'Logout', :logout, method: :delete
     - else
       = link_to 'Register', new_user_path

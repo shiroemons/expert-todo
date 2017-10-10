@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :password, length: { in: 4..72 }, allow_blank: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
+
+  has_many :tasks
 end

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   get '/sign_up', to: 'users#new', as: :new_user
   post '/registration', to: 'users#create', as: :users
+
+  resources :tasks
 end
