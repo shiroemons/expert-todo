@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :check_task, only: [:show, :edit, :update, :destroy]
 
   def index
     @tasks = current_user.tasks
@@ -42,9 +43,10 @@ class TasksController < ApplicationController
 
     def set_task
       @task = current_user.tasks.find_by(id: params[:id])
-      unless @task
-        redirect_to tasks_url
-      end
+    end
+
+    def check_task
+      redirect_to tasks_url unless @task
     end
 
     def task_params
