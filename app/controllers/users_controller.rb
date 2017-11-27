@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
-  before_action :set_user, only: [:destroy]
 
   def new
     redirect_back_or_to(root_path) if current_user
