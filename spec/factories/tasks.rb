@@ -3,6 +3,6 @@ FactoryGirl.define do
     sequence(:title) { |n| "test_#{n}" }
     content 'MyText'
     expired_at { Time.now.zone }
-    association :user
+    user
   end
 end
