@@ -38,7 +38,7 @@ module ExpertTodo
       g.orm :active_record
       g.template_engine :haml
       g.test_framework :rspec, fixture: true
-      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
       g.view_specs false
       g.controller_specs true
       g.routing_specs false

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :task do
     sequence(:title) { |n| "test_#{n}" }
     content 'MyText'

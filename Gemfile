@@ -37,7 +37,7 @@ group :development, :test do
   gem 'awesome_print', require: 'ap'
   gem 'bullet'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-doc'
