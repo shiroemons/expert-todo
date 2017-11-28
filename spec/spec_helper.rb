@@ -13,7 +13,19 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'factory_bot_rails'
+
 RSpec.configure do |config|
+  config.before :suite do
+    DatabaseRewinder.clean_all
+  end
+
+  config.after do
+    DatabaseRewinder.clean
+  end
+
+  config.include FactoryBot::Syntax::Methods
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
